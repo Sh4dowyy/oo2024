@@ -27,7 +27,7 @@ public class Main {
     }
 
     public static void tagastabVoid(boolean bool, int arv) {
-        System.out.printf("Sinu parameetrid on %b ja %d%n", bool, arv);
+        System.out.printf("Sinu parameetrid on %b ja %d %n", bool, arv);
         //System.out.println("Sinu parameetrid on " + bool + " ja " + arv);
     }
 
