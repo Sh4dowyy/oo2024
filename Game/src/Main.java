@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -6,94 +8,50 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-        Random random = new Random();
+        // saab enda terve hunniku funktsioone ja muutujaid
 
-        int kaardiKorgus = 5;
-        int kaardiLaius = 10;
+        Random random = new Random(); // saab enda terve hunniku funktsioone ja muutujaid
 
-        int mangijaXCoord = saaKoordinaat(random, kaardiLaius);
-        int mangijaYCoord = saaKoordinaat(random, kaardiKorgus);
-        char mangijaSymbol = 'x';
+        Maailm maailm = new Maailm(5, 10);
 
-        int draakonXCoord = saaKoordinaat(random, kaardiLaius);
-        int draakonYCoord = saaKoordinaat(random, kaardiKorgus);
-        char draakonSymbol = 'D';
+        Mangija mangija = new Mangija(random, maailm.kaardiKorgus, maailm.kaardiLaius);
+        Ork ork = new Ork(random, maailm.kaardiKorgus, maailm.kaardiLaius);
+        Draakon draakon = new Draakon(random, maailm.kaardiKorgus, maailm.kaardiLaius);
+        List<Tegelane> tegelased = new ArrayList<>();
+        tegelased.add(mangija);
+        tegelased.add(ork);
+        tegelased.add(draakon);
 
-        int orkXCoord = saaKoordinaat(random, kaardiLaius);
-        int orkYCoord = saaKoordinaat(random, kaardiKorgus);
-        char orkSymbol = 'O';
+        Ese m66k = new Ese("Mõõk", 10, 1, random, maailm);
+        Ese saabas = new Ese("Saabas", 5, 3, random, maailm);
+        Ese hammer = new Ese("Hammer", 1, 5,  random, maailm);
+        List<Ese> esemed = new ArrayList<>();
+        esemed.add(m66k);
+        esemed.add(saabas);
+        esemed.add(hammer);
 
-        //import java.util.Scanner
         Scanner scanner = new Scanner(System.in); // järegmine tunni teema
 
-        prindiKaart(kaardiKorgus, kaardiLaius, mangijaXCoord, mangijaYCoord, mangijaSymbol, draakonXCoord, draakonYCoord, draakonSymbol, orkXCoord, orkYCoord, orkSymbol);
+        maailm.prindiKaart(tegelased, esemed);
 
         String sisend = scanner.nextLine();
 
-        switch (sisend) {
-            case "w" -> mangijaYCoord--;
-            case "s" -> mangijaYCoord++;
-            case "a" -> mangijaXCoord--;
-            case "d" -> mangijaXCoord++;
-        }
-
-
-//        if (sisend.equals("w")) {
-//            mangijaYCoord--;
-//        }
-//        else if (sisend.equals("s")) {
-//            mangijaYCoord++;
-//        }
-//        else if (sisend.equals("a")) {
-//            mangijaXCoord--;
-//        }
-//        else if (sisend.equals("d")) {
-//            mangijaXCoord++;
-//        }
+        mangija.liigu(sisend, maailm);
 
         while (!sisend.equals("end")) { // m.equals() --> ==    !m.equals() --> !=
-            prindiKaart(kaardiKorgus, kaardiLaius, mangijaXCoord, mangijaYCoord, mangijaSymbol, draakonXCoord, draakonYCoord, draakonSymbol, orkXCoord, orkYCoord, orkSymbol);
-
+            maailm.prindiKaart(tegelased, esemed);
             sisend = scanner.nextLine();
-            switch (sisend) {
-                case "w" -> mangijaYCoord--;
-                case "s" -> mangijaYCoord++;
-                case "a" -> mangijaXCoord--;
-                case "d" -> mangijaXCoord++;
-            }
-        }
-
-
-
-    }//main (args[])
-
-    private static void prindiKaart(int kaardiKorgus, int kaardiLaius, int mangijaXCoord, int mangijaYCoord, char mangijaSymbol, int draakonXCoord, int draakonYCoord, char draakonSymbol, int orkXCoord, int orkYCoord, char orkSymbol) {
-        for (int y = 0; y < kaardiKorgus; y++) {
-            for (int x = 0; x < kaardiLaius; x++) {
-                char symbol;
-
-                if (y == 0 || y == kaardiKorgus -1) {
-                    symbol = '-';
-                } else if (x == 0 || x == kaardiLaius -1) {
-                    symbol = '|';
-                } else {
-                    if (x == mangijaXCoord && y == mangijaYCoord) {
-                        symbol = mangijaSymbol;
-                    } else if (x == draakonXCoord && y == draakonYCoord) {
-                        symbol = draakonSymbol;
-                    } else if (x == orkXCoord && y == orkYCoord) {
-                        symbol = orkSymbol;
-                    } else {
-                        symbol = ' ';
-                    }
+            mangija.liigu(sisend, maailm);
+            for (Ese e: esemed) {
+                if (mangija.xCoord == e.xCoord && mangija.yCoord == e.yCoord) {
+                    mangija.ese = e;
+                    System.out.println("Kojasid üles eseme: " + e.nimetus);
+                    break;
                 }
-                System.out.print(symbol);
             }
-            System.out.println();
-        }
-    }
 
-    private static int saaKoordinaat(Random random, int kaart) {
-        return random.nextInt(1, kaart - 1);
-    }
+            // esemed.forEach(e =>  { if (e.xCoord && e.yCoord)})
+
+        }
+    }//main (args[])
 }//Main()
