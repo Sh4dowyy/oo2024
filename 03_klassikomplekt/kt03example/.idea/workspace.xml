@@ -5,23 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b175ad3-5838-4c39-844d-9977dcb27d98" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../../.idea/oo2024.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../02_klass/02_klass.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../02_klass/kt02/kt02.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../02_klass/kt02/src/HotelRoom.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../02_klass/kt02example/kt02.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Arvuti.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Game/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Game/src/Draakon.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Game/src/Ese.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Game/src/JuhuslikKoordinaat.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Game/src/Maailm.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Game/src/Mangija.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Game/src/Ork.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Game/src/Soiduk.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../Game/src/Tegelane.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Game/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../Game/src/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Arvuti.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Arvuti.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,9 +25,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2cdHQGAgZXbk1tpT8ayjChQ3hrE" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -48,6 +35,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Application.Main.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",

@@ -1,11 +1,12 @@
 public class Arvuti {
     Info info; // klassikomplekt
-    int maksmus;
+    int maksumus;
     String pood;
 
-    public Arvuti(Info info, int maksmus, String pood) {
+    // parem klõps -> Generate -> Constructor
+    public Arvuti(Info info, int maksumus, String pood) {
         this.info = info;
-        this.maksmus = maksmus;
+        this.maksumus = maksumus;
         this.pood = pood;
     }
 
@@ -14,7 +15,7 @@ public class Arvuti {
     }
 
     public int paneAllahindlus(int allahindlus) {
-        this.maksmus = this.maksmus - allahindlus;
-        return this.maksmus;
+        this.maksumus = this.maksumus - allahindlus;
+        return this.maksumus;
     }
 }
