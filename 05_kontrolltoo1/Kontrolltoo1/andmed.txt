@@ -1,0 +1,6 @@
+Algpalk: 1000
+Koef: 1
+Koef: 2
+Koef: 3
+Koef: 4
+Koef: 5
