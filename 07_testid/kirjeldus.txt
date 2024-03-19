@@ -1,1 +1,2 @@
-Rühmaga koostatud rakendus, kus on liides, selle tööd kontrollivad testid, realiseeriv klass ning liidesele vastavat klassi kasutav näitprogramm. 
+Rühmaga koostatud rakendus, kus on liides, selle tööd kontrollivad testid,
+realiseeriv klass ning liidesele vastavat klassi kasutav näitprogramm.
