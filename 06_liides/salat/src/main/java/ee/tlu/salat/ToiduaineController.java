@@ -9,6 +9,7 @@ import java.util.List;
 public class ToiduaineController {
     List<String> toiduained = new ArrayList<>(); // imiteerime andmebaasi
 
+
     // localhost:8080/saa-toiduained ---> []
     @GetMapping("saa-toiduained")
     public List<String> saaToiduained() {
